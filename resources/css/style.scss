@@ -1,0 +1,49 @@
+@mixin font-styling($size, $family: inherit, $weight: normal, $color: #fff) {
+	color: $color;
+	font:{
+		family:$family;
+		weight: $weight;
+		size: $size;
+	}
+	
+}
+
+body{
+	background-color: black;
+	text-align: center;
+}
+
+.top {
+	h1 {
+		@include font-styling(50px, Verdana)
+	}
+	
+	a {
+		display: block;
+	}
+}
+
+.link {
+	@include font-styling(16px, $color: aquamarine)
+}
+
+.center {
+	h2{
+		@include font-styling(42px, Verdana, 300)
+	}
+	p{
+		@include font-styling(21px, Verdana, $color: grey)
+	}
+}
+
+.bottom {
+	h2{
+		@include font-styling(42px, Verdana,  300)
+		}
+}
+
+
+.footer{
+	text-align: right;
+	color: grey;
+}
